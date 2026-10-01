@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mebel Market — Premium Mebel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="brand">
+        <div class="brand-mark">M</div>
+
+        <div>
+            <h2>MEBEL<span>MARKET</span></h2>
+            <small>PREMIUM FURNITURE</small>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#home">Bosh sahifa</a>
+        <a href="#catalog">Katalog</a>
+        <a href="#about">Biz haqimizda</a>
+        <button class="admin-open" onclick="openAdminLogin()">
+            ⚙ Admin
+        </button>
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            ✦ PREMIUM MEBEL KATALOGI
+        </div>
+
+        <h1>
+            Uyingiz uchun
+            <span>mukammal mebel</span>
+        </h1>
+
+        <p>
+            Zamonaviy dizayn, yuqori sifat va sizga mos
+            individual yechimlar.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#catalog" class="gold-btn">
+                Katalogni ko‘rish
+                <span>→</span>
+            </a>
+
+            <a href="#about" class="outline-btn">
+                Biz haqimizda
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-scroll">
+        <span></span>
+        Pastga aylantiring
+    </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+    <div class="stat">
+        <strong>500+</strong>
+        <span>Tayyor loyihalar</span>
+    </div>
+
+    <div class="stat">
+        <strong>10+</strong>
+        <span>Yillik tajriba</span>
+    </div>
+
+    <div class="stat">
+        <strong>100%</strong>
+        <span>Sifat kafolati</span>
+    </div>
+
+    <div class="stat">
+        <strong>24/7</strong>
+        <span>Mijozlar xizmati</span>
+    </div>
+
+</section>
+
+
+<!-- ================= CATALOG ================= -->
+
+<section class="catalog-section" id="catalog">
+
+    <div class="section-heading">
+
+        <div>
+            <div class="mini-title">OUR COLLECTION</div>
+
+            <h2>
+                Sizga mos
+                <span>mebelni tanlang</span>
+            </h2>
+        </div>
+
+        <p>
+            Katalogimizdagi mahsulotlarni ko‘ring,
+            narxini bilib oling va bir necha soniyada
+            buyurtma bering.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="catalog-tools">
+
+        <div class="search-box">
+            <span>⌕</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Mebel qidirish..."
+                oninput="searchProducts()"
+            >
+        </div>
+
+        <div class="categories">
+
+            <button class="category active"
+                    onclick="filterCategory('all', this)">
+                Barchasi
+            </button>
+
+            <button class="category"
+                    onclick="filterCategory('oshxona', this)">
+                Oshxona
+            </button>
+
+            <button class="category"
+                    onclick="filterCategory('shkaf', this)">
+                Shkaf
+            </button>
+
+            <button class="category"
+                    onclick="filterCategory('yotoqxona', this)">
+                Yotoqxona
+            </button>
+
+            <button class="category"
+                    onclick="filterCategory('ofis', this)">
+                Ofis
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+
+    <div class="products" id="productsContainer"></div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="about-image">
+
+        <div class="image-card">
+            <div class="image-placeholder">
+                <span>INTERIOR</span>
+                <strong>DESIGN</strong>
+            </div>
+        </div>
+
+        <div class="experience">
+            <strong>8+</strong>
+            <span>YIL TAJRIBA</span>
+        </div>
+
+    </div>
+
+
+    <div class="about-content">
+
+        <div class="mini-title">BIZ HAQIMIZDA</div>
+
+        <h2>
+            Har bir uyga
+            <span>o‘ziga xos uslub</span>
+        </h2>
+
+        <p>
+            Biz zamonaviy va sifatli mebellarni ishlab chiqarish
+            hamda mijozlarga yetkazib berishga ixtisoslashganmiz.
+        </p>
+
+        <p>
+            Har bir loyiha mijozning ehtiyoji, xonasi va didiga
+            mos ravishda tayyorlanadi.
+        </p>
+
+        <div class="about-features">
+
+            <div>
+                <b>01</b>
+                <span>Sifatli material</span>
+            </div>
+
+            <div>
+                <b>02</b>
+                <span>Individual dizayn</span>
+            </div>
+
+            <div>
+                <b>03</b>
+                <span>Tezkor yetkazib berish</span>
+            </div>
+
+            <div>
+                <b>04</b>
+                <span>Kafolat</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-brand">
+
+        <div class="brand-mark">M</div>
+
+        <h2>MEBEL<span>MARKET</span></h2>
+
+    </div>
+
+    <p>
+        Sifatli mebel — qulay hayot.
+    </p>
+
+    <div class="footer-bottom">
+        © 2026 Mebel Market. Barcha huquqlar himoyalangan.
+    </div>
+
+</footer>
+
+
+<!-- ================= ORDER MODAL ================= -->
+
+<div class="modal" id="orderModal">
+
+    <div class="modal-box">
+
+        <button class="modal-close"
+                onclick="closeModal('orderModal')">
+            ×
+        </button>
+
+        <div class="modal-icon">
+            🪑
+        </div>
+
+        <h2>Buyurtma berish</h2>
+
+        <p class="modal-product"
+           id="selectedProduct"></p>
+
+        <input
+            type="text"
+            id="customerName"
+            placeholder="Ismingiz"
+        >
+
+        <input
+            type="tel"
+            id="customerPhone"
+            placeholder="Telefon raqamingiz"
+        >
+
+        <input
+            type="text"
+            id="customerAddress"
+            placeholder="Manzilingiz"
+        >
+
+        <textarea
+            id="customerComment"
+            placeholder="Qo‘shimcha izoh..."
+        ></textarea>
+
+        <button class="submit-btn"
+                onclick="submitOrder()">
+            BUYURTMA BERISH →
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= ADMIN LOGIN ================= -->
+
+<div class="modal" id="adminLogin">
+
+    <div class="modal-box admin-login">
+
+        <button class="modal-close"
+                onclick="closeModal('adminLogin')">
+            ×
+        </button>
+
+        <div class="admin-logo">
+            🔐
+        </div>
+
+        <h2>Admin panel</h2>
+
+        <p>
+            Boshqaruv paneliga kirish
+        </p>
+
+        <input
+            type="text"
+            id="adminUsername"
+            placeholder="Login"
+        >
+
+        <input
+            type="password"
+            id="adminPassword"
+            placeholder="Parol"
+        >
+
+        <button class="submit-btn"
+                onclick="adminLogin()">
+            KIRISH
+        </button>
+
+        <small class="login-hint">
+            Admin login va parolingizni kiriting
+        </small>
+
+    </div>
+
+</div>
+
+
+<!-- ================= ADMIN PANEL ================= -->
+
+<div class="admin-panel" id="adminPanel">
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-brand">
+
+            <div class="brand-mark">M</div>
+
+            <span>MEBEL MARKET</span>
+
+        </div>
+
+
+        <div class="admin-menu">
+
+            <button class="admin-menu-btn active"
+                    onclick="adminPage('overview', this)">
+                <span>⌂</span>
+                Dashboard
+            </button>
+
+            <button class="admin-menu-btn"
+                    onclick="adminPage('products', this)">
+                <span>▣</span>
+                Katalog
+            </button>
+
+            <button class="admin-menu-btn"
+                    onclick="adminPage('orders', this)">
+                <span>🛒</span>
+                Buyurtmalar
+                <b id="orderBadge">0</b>
+            </button>
+
+            <button class="admin-menu-btn"
+                    onclick="adminPage('clients', this)">
+                <span>♙</span>
+                Mijozlar
+            </button>
+
+            <button class="admin-menu-btn"
+                    onclick="adminPage('reports', this)">
+                <span>◈</span>
+                Hisobot
+            </button>
+
+            <!-- SOZLAMALAR -->
+
+            <button class="admin-menu-btn"
+                    onclick="adminPage('settings', this)">
+                <span>🔐</span>
+                Sozlamalar
+            </button>
+
+        </div>
+
+
+        <button class="logout-btn"
+                onclick="logoutAdmin()">
+            ← Chiqish
+        </button>
+
+    </aside>
+
+
+    <main class="admin-main">
+
+        <header class="admin-header">
+
+            <div>
+                <h1 id="adminTitle">Dashboard</h1>
+                <p>Bugungi biznes ko‘rsatkichlari</p>
+            </div>
+
+            <div class="admin-user">
+
+                <div class="admin-avatar">
+                    A
+                </div>
+
+                <div>
+                    <strong>Administrator</strong>
+                    <small>Online</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= OVERVIEW ================= -->
+
+        <section class="admin-page active"
+                 id="admin-overview">
+
+            <div class="dashboard-cards">
+
+                <div class="dash-card">
+
+                    <div class="dash-icon gold">
+                        🛒
+                    </div>
+
+                    <span>Jami buyurtmalar</span>
+
+                    <strong id="dashOrders">
+                        0
+                    </strong>
+
+                    <small>Buyurtmalar</small>
+
+                </div>
+
+
+                <div class="dash-card">
+
+                    <div class="dash-icon green">
+                        💵
+                    </div>
+
+                    <span>Jami savdo</span>
+
+                    <strong id="dashSales">
+                        0 so‘m
+                    </strong>
+
+                    <small>Umumiy tushum</small>
+
+                </div>
+
+
+                <div class="dash-card">
+
+                    <div class="dash-icon blue">
+                        ✓
+                    </div>
+
+                    <span>To‘langan</span>
+
+                    <strong id="dashPaid">
+                        0 so‘m
+                    </strong>
+
+                    <small>Qabul qilingan</small>
+
+                </div>
+
+
+                <div class="dash-card">
+
+                    <div class="dash-icon red">
+                        !
+                    </div>
+
+                    <span>Qarz</span>
+
+                    <strong id="dashDebt">
+                        0 so‘m
+                    </strong>
+
+                    <small>Qolgan summa</small>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-content-grid">
+
+                <div class="admin-table-box">
+
+                    <div class="admin-box-head">
+
+                        <div>
+                            <h2>So‘nggi buyurtmalar</h2>
+                            <p>Yangi buyurtmalar</p>
+                        </div>
+
+                        <button onclick="adminPage('orders')">
+                            Barchasi →
+                        </button>
+
+                    </div>
+
+
+                    <div class="table-wrap">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+                                    <th>Mijoz</th>
+                                    <th>Mahsulot</th>
+                                    <th>Narx</th>
+                                    <th>Status</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="recentOrders"></tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-box">
+
+                    <h2>Tezkor ma’lumot</h2>
+
+                    <div class="quick-stat">
+                        <span>Katalogdagi mahsulotlar</span>
+                        <strong id="quickProducts">0</strong>
+                    </div>
+
+                    <div class="quick-stat">
+                        <span>Jami mijozlar</span>
+                        <strong id="quickClients">0</strong>
+                    </div>
+
+                    <div class="quick-stat">
+                        <span>Sotilgan</span>
+                        <strong id="quickSold">0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRODUCTS ADMIN ================= -->
+
+        <section class="admin-page"
+                 id="admin-products">
+
+            <div class="admin-table-box">
+
+                <div class="admin-box-head">
+
+                    <div>
+                        <h2>Katalog</h2>
+                        <p>Mebel mahsulotlarini boshqaring</p>
+                    </div>
+
+                    <button class="gold-admin-btn"
+                            onclick="openProductForm()">
+                        + Mebel qo‘shish
+                    </button>
+
+                </div>
+
+
+                <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Mahsulot</th>
+                                <th>Kategoriya</th>
+                                <th>Narx</th>
+                                <th>Sotilgan</th>
+                                <th>Amal</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="adminProductsTable"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ORDERS ADMIN ================= -->
+
+        <section class="admin-page"
+                 id="admin-orders">
+
+            <div class="admin-table-box">
+
+                <div class="admin-box-head">
+
+                    <div>
+                        <h2>Buyurtmalar</h2>
+                        <p>Mijozlardan kelgan buyurtmalar</p>
+                    </div>
+
+                </div>
+
+
+                <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Mijoz</th>
+                                <th>Telefon</th>
+                                <th>Mahsulot</th>
+                                <th>Narx</th>
+                                <th>To‘lov</th>
+                                <th>Status</th>
+                                <th>Amal</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="adminOrdersTable"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CLIENTS ================= -->
+
+        <section class="admin-page"
+                 id="admin-clients">
+
+            <div class="admin-table-box">
+
+                <div class="admin-box-head">
+
+                    <div>
+                        <h2>Mijozlar</h2>
+                        <p>Barcha mijozlar</p>
+                    </div>
+
+                </div>
+
+
+                <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Ism</th>
+                                <th>Telefon</th>
+                                <th>Manzil</th>
+                                <th>Buyurtma</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="adminClientsTable"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REPORTS ================= -->
+
+        <section class="admin-page"
+                 id="admin-reports">
+
+            <div class="report-grid">
+
+                <div class="report-main">
+
+                    <div class="admin-box-head">
+
+                        <div>
+                            <h2>Moliyaviy hisobot</h2>
+                            <p>Sotuv va to‘lovlar</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="money-report">
+
+                        <div>
+                            <span>Jami savdo</span>
+                            <strong id="reportSales">
+                                0
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>To‘langan</span>
+                            <strong id="reportPaid">
+                                0
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Qolgan qarz</span>
+                            <strong id="reportDebt">
+                                0
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sales-circle">
+
+                    <div class="circle-inner">
+
+                        <strong id="soldPercent">
+                            0%
+                        </strong>
+
+                        <span>Sotilgan</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SETTINGS ================= -->
+
+        <section class="admin-page"
+                 id="admin-settings">
+
+            <div class="admin-table-box">
+
+                <div class="admin-box-head">
+
+                    <div>
+                        <h2>🔐 Admin sozlamalari</h2>
+                        <p>
+                            Login va parolni o‘zgartirish
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="settings-card">
+
+                    <div class="form-group">
+
+                        <label>
+                            Yangi login
+                        </label>
+
+                        <input
+                            type="text"
+                            id="newAdminUsername"
+                            placeholder="Yangi login"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Yangi parol
+                        </label>
+
+                        <input
+                            type="password"
+                            id="newAdminPassword"
+                            placeholder="Yangi parol"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Parolni tasdiqlang
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmAdminPassword"
+                            placeholder="Parolni qayta kiriting"
+                        >
+
+                    </div>
+
+
+                    <button class="submit-btn"
+                            onclick="saveAdminCredentials()">
+                        💾 SAQLASH
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ================= PRODUCT FORM ================= -->
+
+<div class="modal"
+     id="productModal">
+
+    <div class="modal-box">
+
+        <button class="modal-close"
+                onclick="closeModal('productModal')">
+            ×
+        </button>
+
+        <h2>Yangi mebel</h2>
+
+        <input
+            type="text"
+            id="productName"
+            placeholder="Mebel nomi"
+        >
+
+        <select id="productCategory">
+
+            <option value="oshxona">
+                Oshxona
+            </option>
+
+            <option value="shkaf">
+                Shkaf
+            </option>
+
+            <option value="yotoqxona">
+                Yotoqxona
+            </option>
+
+            <option value="ofis">
+                Ofis
+            </option>
+
+        </select>
+
+        <input
+            type="number"
+            id="productPrice"
+            placeholder="Narxi"
+        >
+
+        <input
+            type="text"
+            id="productSize"
+            placeholder="O‘lchami"
+        >
+
+        <div class="image-upload-box">
+            <label for="productImage">
+                📷 Mahsulot rasmini tanlang
+            </label>
+        
+            <input
+                type="file"
+                id="productImage"
+                accept="image/*"
+                onchange="previewProductImage(event)"
+            >
+        
+            <div id="imagePreview" class="image-preview">
+                <span>Rasm tanlanmagan</span>
+            </div>
+        </div>
+
+        <textarea
+            id="productDescription"
+            placeholder="Mahsulot haqida..."
+        ></textarea>
+
+        <button class="submit-btn"
+                onclick="addProduct()">
+            MAHSULOTNI SAQLASH
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
